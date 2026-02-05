@@ -10,12 +10,19 @@
   margin:0;
   background:#0b1220;
   color:#fff;
-  background-image: url("escudo.png");
-  background-repeat: no-repeat;
-  background-position: center 120px;
-  background-size: 700px;
-  background-attachment: fixed;
+  
 }
+    body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url("escudo.png") no-repeat center 120px;
+  background-size:700px;
+  opacity:0.10;
+  pointer-events:none;
+  z-index:-1;
+}
+
     header{padding:18px 16px;background:#0f1a33;position:sticky;top:0}
     h1{margin:0;font-size:18px}
     .grid{display:grid;grid-template-columns:1fr;gap:12px;padding:16px;background:rgba(11,18,32,.55)}
